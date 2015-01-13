@@ -99,8 +99,6 @@ public class NavigationDrawerFragment extends Fragment {
         mDrawerListView = (ListView) inflater.inflate(
                 R.layout.fragment_navigation_drawer, container, false);
 
-//        mDrawerListView = (ListView) getFragmentManager().findFragmentById()
-
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -116,22 +114,7 @@ public class NavigationDrawerFragment extends Fragment {
         list.add(new ItemListView(getString(R.string.amigos), R.drawable.ic_launcher));
         list.add(new ItemListView(getString(R.string.foruns), R.drawable.ic_launcher));
 
-
-
         mDrawerListView.setAdapter(new ListViewAdapter(getActionBar().getThemedContext(), list));
-//        mDrawerListView.setAdapter(new ArrayAdapter<String>(
-//                getActionBar().getThemedContext(),
-//                android.R.layout.simple_list_item_activated_1,
-//                android.R.id.text1,
-//                new String[]{
-//                        getString(R.string.timeline),
-//                        getString(R.string.biblioteca),
-//                        getString(R.string.perfil),
-//                        getString(R.string.chat),
-//                        getString(R.string.amigos),
-//                        getString(R.string.foruns)
-//                }));
-
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
 
         return mDrawerListView;
