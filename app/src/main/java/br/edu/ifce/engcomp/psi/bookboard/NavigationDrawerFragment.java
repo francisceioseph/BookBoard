@@ -20,7 +20,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
@@ -93,6 +99,8 @@ public class NavigationDrawerFragment extends Fragment {
         mDrawerListView = (ListView) inflater.inflate(
                 R.layout.fragment_navigation_drawer, container, false);
 
+//        mDrawerListView = (ListView) getFragmentManager().findFragmentById()
+
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -100,22 +108,45 @@ public class NavigationDrawerFragment extends Fragment {
             }
         });
 
-        mDrawerListView.setAdapter(new ArrayAdapter<String>(
-                getActionBar().getThemedContext(),
-                android.R.layout.simple_list_item_activated_1,
-                android.R.id.text1,
-                new String[]{
-                        getString(R.string.timeline),
-                        getString(R.string.biblioteca),
-                        getString(R.string.perfil),
-                        getString(R.string.chat),
-                        getString(R.string.amigos),
-                        getString(R.string.foruns)
-                }));
+        ArrayList<ItemListView> list = new ArrayList<ItemListView>();
+        list.add(new ItemListView(getString(R.string.timeline), R.drawable.ic_launcher));
+        list.add(new ItemListView(getString(R.string.biblioteca), R.drawable.ic_launcher));
+        list.add(new ItemListView(getString(R.string.perfil), R.drawable.ic_launcher));
+        list.add(new ItemListView(getString(R.string.chat), R.drawable.ic_launcher));
+        list.add(new ItemListView(getString(R.string.amigos), R.drawable.ic_launcher));
+        list.add(new ItemListView(getString(R.string.foruns), R.drawable.ic_launcher));
+
+
+
+        mDrawerListView.setAdapter(new ListViewAdapter(getActionBar().getThemedContext(), list));
+//        mDrawerListView.setAdapter(new ArrayAdapter<String>(
+//                getActionBar().getThemedContext(),
+//                android.R.layout.simple_list_item_activated_1,
+//                android.R.id.text1,
+//                new String[]{
+//                        getString(R.string.timeline),
+//                        getString(R.string.biblioteca),
+//                        getString(R.string.perfil),
+//                        getString(R.string.chat),
+//                        getString(R.string.amigos),
+//                        getString(R.string.foruns)
+//                }));
 
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
 
         return mDrawerListView;
+    }
+
+    private List<Map<String, Object>> listarMenuOptions() {
+
+        ArrayList<Map<String, Object>> options = new ArrayList<Map<String, Object>>();
+        Map<String, Object> item = new HashMap<String, Object>();
+
+        item.put("navigationMenuItemIcon", R.drawable.ic_launcher);
+        item.put("navigationMenuItemText", getString(R.string.timeline));
+        options.add(item);
+
+        return options;
     }
 
     public boolean isDrawerOpen() {
