@@ -15,7 +15,6 @@ public class BookForDB {
     public static void getBookForDB(Resources resource, Context context){
         BookDAO bookDAO = new BookDAO(context);
 
-        /*
         Book book = new Book();
         book.setTitle("Grerra dos Tronos - As Crônicas de Gelo e Fogo");
         book.setAuthor("George R.R. Martin");
@@ -29,7 +28,6 @@ public class BookForDB {
         book2.setPublisher("LeYa");
         book2.setImage(ImageUtil.getImage(resource,R.drawable.guerradostronos2));
         bookDAO.insert(book2);
-
 
         Book book3 = new Book();
         book3.setTitle("Uma Breve História do Tempo");
@@ -54,7 +52,7 @@ public class BookForDB {
         book5.setImage(ImageUtil.getImage(resource,R.drawable.ailhadoconhecimento));
 
         bookDAO.insert(book5);
-        */
+
 
         Book book6 = new Book();
         book6.setTitle("Fahrenheit 451");

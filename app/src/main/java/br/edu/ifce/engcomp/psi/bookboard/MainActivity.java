@@ -56,8 +56,8 @@ public class MainActivity extends ActionBarActivity
                 (DrawerLayout) findViewById(R.id.drawer_layout));
 
         //insertBook();
-        BookForDB.getBookForDB(getResources(),this);
-        buscaBookAll();
+        //BookForDB.getBookForDB(getResources(),this);
+        //buscaBookAll();
     }
 
     @Override
