@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentManager;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -17,6 +18,14 @@ import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import java.util.Iterator;
+import java.util.List;
+
+import br.edu.ifce.engcomp.psi.dao.BookDAO;
+import br.edu.ifce.engcomp.psi.model.Book;
+import br.edu.ifce.engcomp.psi.util.BookForDB;
+import br.edu.ifce.engcomp.psi.util.ImageUtil;
 
 
 public class MainActivity extends ActionBarActivity
@@ -45,6 +54,10 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
+        //insertBook();
+        BookForDB.getBookForDB(getResources(),this);
+        buscaBookAll();
     }
 
     @Override
@@ -152,6 +165,28 @@ public class MainActivity extends ActionBarActivity
             super.onAttach(activity);
             ((MainActivity) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
+        }
+    }
+
+/*
+    public void insertBook(){
+        Book book = new Book();
+        book.setTitle("Guerra dos Tronos - A Fúria dos Reis");
+        book.setAuthor("George R.R. Martin");
+        book.setPublisher("LeYa");
+        book.setImage(ImageUtil.getImage(getResources(),R.drawable.guerradostronos2));
+
+        BookDAO bookDAO = new BookDAO(this);
+        bookDAO.insert(book);
+    }
+*/
+    public void buscaBookAll(){
+        BookDAO bookDAO = new BookDAO(this);
+        List<Book> bookList = bookDAO.getBookAll();
+
+        for (Iterator iterator = bookList.iterator();iterator.hasNext();){
+            Book book = (Book)iterator.next();
+            Log.i("INFO-BOOK",book.toString());
         }
     }
 
