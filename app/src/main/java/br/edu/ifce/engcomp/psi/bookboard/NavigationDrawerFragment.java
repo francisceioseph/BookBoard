@@ -107,12 +107,12 @@ public class NavigationDrawerFragment extends Fragment {
         });
 
         ArrayList<ItemListView> list = new ArrayList<ItemListView>();
-        list.add(new ItemListView(getString(R.string.timeline), R.drawable.ic_launcher));
-        list.add(new ItemListView(getString(R.string.biblioteca), R.drawable.ic_launcher));
-        list.add(new ItemListView(getString(R.string.perfil), R.drawable.ic_launcher));
-        list.add(new ItemListView(getString(R.string.chat), R.drawable.ic_launcher));
-        list.add(new ItemListView(getString(R.string.amigos), R.drawable.ic_launcher));
-        list.add(new ItemListView(getString(R.string.foruns), R.drawable.ic_launcher));
+        list.add(new ItemListView(getString(R.string.timeline), R.drawable.timeline));
+        list.add(new ItemListView(getString(R.string.biblioteca), R.drawable.biblioteca));
+        list.add(new ItemListView(getString(R.string.perfil), R.drawable.perfil));
+        list.add(new ItemListView(getString(R.string.chat), R.drawable.chat));
+        list.add(new ItemListView(getString(R.string.amigos), R.drawable.amigos));
+        list.add(new ItemListView(getString(R.string.foruns), R.drawable.foruns));
 
         mDrawerListView.setAdapter(new ListViewAdapter(getActionBar().getThemedContext(), list));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
