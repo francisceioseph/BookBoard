@@ -20,7 +20,7 @@ public class ImageUtil {
        return imageBytes;
    }
 
-    //Trata o tamanho da imagem
+    //Trata o tamanho da imagem - Por enquanto não funciona para nosso tamnho de imagem
     public static Bitmap changeSizeImage(byte[] bytes, int width, int height){
 
         int targetW = width;
@@ -35,6 +35,7 @@ public class ImageUtil {
         int imageH = bmOptions.outHeight;
 
         int scaleFactor = Math.min(imageW/targetW, imageH/targetW);
+        //int scaleFactor = calculateInSampleSize(bmOptions, targetW, targetH);
 
         bmOptions.inJustDecodeBounds = false;
         bmOptions.inSampleSize = scaleFactor;
