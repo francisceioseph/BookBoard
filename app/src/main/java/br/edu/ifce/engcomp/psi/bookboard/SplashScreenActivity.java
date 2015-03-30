@@ -20,8 +20,8 @@ public class SplashScreenActivity extends Activity implements Runnable{
         super.onCreate(saveInstanceBundle);
         setContentView(R.layout.tela_abertura);
 
-        //insertUserDB();
-        //BookForDB.getBookForDB(getResources(), this);
+        insertUserDB();
+        BookForDB.getBookForDB(getResources(), this);
         Handler splashScreenHandle = new Handler();
         splashScreenHandle.postDelayed(SplashScreenActivity.this,4000);
     }
