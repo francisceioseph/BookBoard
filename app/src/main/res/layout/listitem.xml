@@ -21,7 +21,8 @@
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/imageView1"
         android:text="Title Book 1"
-        android:textSize="16sp"/>
+        android:textSize="16sp"
+        android:textColor="#000000" />
     
     <TextView
         android:id="@+id/textView2"
@@ -29,6 +30,7 @@
         android:layout_height="wrap_content"
         android:text="Author"
         android:layout_below="@+id/textView1"
-        android:layout_alignStart="@+id/textView1" />
+        android:layout_alignStart="@+id/textView1"
+        android:textColor="#000000" />
 
 </RelativeLayout>

@@ -55,10 +55,6 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
-
-        //insertBook();
-        //BookForDB.getBookForDB(getResources(),this);
-        //buscaBookAll();
     }
 
     @Override
@@ -67,8 +63,13 @@ public class MainActivity extends ActionBarActivity
 
         switch (position) {
             case 1: {
-                Intent intent = new Intent(MainActivity.this, Library.class);
-                startActivity(intent);
+
+                mTitle = "Biblioteca";
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, new LibraryFragment())
+                        .commit();
                 break;
             }
             default: {
@@ -180,27 +181,4 @@ public class MainActivity extends ActionBarActivity
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
     }
-
-/*
-    public void insertBook(){
-        Book book = new Book();
-        book.setTitle("Guerra dos Tronos - A Fúria dos Reis");
-        book.setAuthor("George R.R. Martin");
-        book.setPublisher("LeYa");
-        book.setImage(ImageUtil.getImage(getResources(),R.drawable.guerradostronos2));
-
-        BookDAO bookDAO = new BookDAO(this);
-        bookDAO.insert(book);
-    }
-*/
-    public void buscaBookAll(){
-        BookDAO bookDAO = new BookDAO(this);
-        List<Book> bookList = bookDAO.getBookAll();
-
-        for (Iterator iterator = bookList.iterator();iterator.hasNext();){
-            Book book = (Book)iterator.next();
-            Log.i("INFO-BOOK",book.toString());
-        }
-    }
-
 }
