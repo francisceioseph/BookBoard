@@ -24,6 +24,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import br.edu.ifce.engcomp.psi.dao.BookDAO;
+import br.edu.ifce.engcomp.psi.dao.PersonDAO;
 import br.edu.ifce.engcomp.psi.model.Book;
 import br.edu.ifce.engcomp.psi.util.BookForDB;
 import br.edu.ifce.engcomp.psi.util.ImageUtil;
@@ -46,6 +47,10 @@ public class MainActivity extends ActionBarActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        TextView username = (TextView) findViewById(R.id.userName);
+//        PersonDAO personDAO = new PersonDAO(this);
+//        username.setText("Shanya Shilma");
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
