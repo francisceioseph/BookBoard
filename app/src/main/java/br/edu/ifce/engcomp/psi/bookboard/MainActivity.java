@@ -71,7 +71,7 @@ public class MainActivity extends ActionBarActivity
                 startActivity(intent);
                 break;
             }
-            case 2: {
+            default: {
 
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 fragmentManager.beginTransaction()
