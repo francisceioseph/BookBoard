@@ -9,6 +9,7 @@ public class Person {
     private String username;
     private String email;
     private String password;
+    private byte[] image;
 
     public Person(){
 
@@ -55,6 +56,14 @@ public class Person {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
     }
 
     @Override

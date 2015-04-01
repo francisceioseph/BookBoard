@@ -30,7 +30,6 @@ public class BookDAO {
         values.put("publisher",book.getPublisher());
 
         db.insert("book",null, values);
-
     }
 
     public List<Book> getBookAll(){

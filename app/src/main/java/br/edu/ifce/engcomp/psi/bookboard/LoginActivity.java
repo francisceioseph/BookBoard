@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import br.edu.ifce.engcomp.psi.dao.PersonDAO;
 import br.edu.ifce.engcomp.psi.model.Person;
+import br.edu.ifce.engcomp.psi.util.UserSingleton;
 
 /**
  * Created by FAMÍLIA on 28/03/2015.
@@ -37,16 +38,18 @@ public class LoginActivity extends Activity{
             @Override
             public void onClick(View v) {
 
-                String loginRight = "user";
-                String senhaRight = "1234";
+                //String loginRight = "user";
+                //String senhaRight = "1234";
 
-                //Person person = personDAO.getPerson(login.getText().toString(),password.getText().toString());
+                Person person = personDAO.getPerson(login.getText().toString(),password.getText().toString());
+
+                UserSingleton.getInstance().setUserName(person.getEmail());
 
                 String strlogin = login.getText().toString();
                 String strsenha = password.getText().toString();
 
-                if (loginRight.equalsIgnoreCase(strlogin)&&senhaRight.equalsIgnoreCase(strsenha)){
-                //if (person!=null){
+                //if (loginRight.equalsIgnoreCase(strlogin)&&senhaRight.equalsIgnoreCase(strsenha)){
+                if (person!=null){
                     initializeScreenMain();
                     Toast.makeText(getApplicationContext(),"Seja bem vindo!",Toast.LENGTH_LONG ).show();
                     finish();

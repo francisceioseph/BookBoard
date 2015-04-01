@@ -19,7 +19,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table book(_id integer primary key autoincrement, title text not null, author text, publisher text, image blob)");
-        db.execSQL("create table person(_id integer primary key autoincrement, name text not null, password text not null, email text not null)");
+        db.execSQL("create table person(_id integer primary key autoincrement, name text not null, password text not null, email text not null, image blob)");
     }
 
     @Override

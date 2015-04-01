@@ -2,6 +2,8 @@ package br.edu.ifce.engcomp.psi.bookboard;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -18,6 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Iterator;
@@ -28,6 +31,7 @@ import br.edu.ifce.engcomp.psi.dao.PersonDAO;
 import br.edu.ifce.engcomp.psi.model.Book;
 import br.edu.ifce.engcomp.psi.util.BookForDB;
 import br.edu.ifce.engcomp.psi.util.ImageUtil;
+import br.edu.ifce.engcomp.psi.util.UserSingleton;
 
 
 public class MainActivity extends ActionBarActivity
@@ -48,9 +52,16 @@ public class MainActivity extends ActionBarActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        TextView username = (TextView) findViewById(R.id.userName);
-//        PersonDAO personDAO = new PersonDAO(this);
-//        username.setText("Shanya Shilma");
+        //TODO Refactoring
+          TextView username = (TextView) findViewById(R.id.userName);
+          username.setText(UserSingleton.getInstance().getUserName());
+
+          PersonDAO personDAO = new PersonDAO(this);
+          byte [] image = personDAO.getImage(UserSingleton.getInstance().getUserName());
+
+          ImageView imageView = (ImageView)findViewById(R.id.userId);
+          Bitmap bitmap = BitmapFactory.decodeByteArray(image, 0, image.length);
+          imageView.setImageBitmap(bitmap);
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);

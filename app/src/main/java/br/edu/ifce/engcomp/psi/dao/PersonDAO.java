@@ -25,6 +25,7 @@ public class PersonDAO {
         values.put("name", person.getUsername());
         values.put("password", person.getPassword());
         values.put("email",person.getEmail());
+        values.put("image",person.getImage());
 
         db.insert("person",null, values);
     }
@@ -44,4 +45,20 @@ public class PersonDAO {
 
         return new Person(emailUser,passwordUser);
     }
+
+    public byte[] getImage(String email){
+        String sql = "SELECT * FROM person WHERE email =?";
+        String[] selectionArgs = new String[] {email};
+        Cursor cursor = db.rawQuery(sql, selectionArgs);
+        cursor.moveToFirst();
+
+        if(cursor.getCount()==0){
+            return null;
+        }
+
+        byte[] image = cursor.getBlob(cursor.getColumnIndex("image"));
+
+        return image;
+    }
+
 }
