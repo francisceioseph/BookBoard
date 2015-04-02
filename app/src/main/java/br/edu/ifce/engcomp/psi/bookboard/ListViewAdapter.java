@@ -64,4 +64,5 @@ public class ListViewAdapter extends BaseAdapter {
         ImageView imageView;
         TextView textView;
     }
+
 }

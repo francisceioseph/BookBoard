@@ -3,10 +3,13 @@ package br.edu.ifce.engcomp.psi.bookboard;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import br.edu.ifce.engcomp.psi.model.Book;
 
 /**
  * Created by FAMÍLIA on 01/04/2015.
@@ -23,16 +26,22 @@ public class InfoBookActivity extends Activity {
     protected void onCreate(Bundle saveInstanceBundle) {
         super.onCreate(saveInstanceBundle);
         setContentView(R.layout.info_book);
+        titleTextView = (TextView)findViewById(R.id.infoTextView1);
+        authorTextView = (TextView)findViewById(R.id.infoTextView2);
+        folderImageView = (ImageView)findViewById(R.id.infoImageView1);
 
+        Intent currentIntent = getIntent();
+        Bundle extras = currentIntent.getExtras();
 
-        //titleTextView = (TextView)findViewById(R.id.infoTextView1);
-        //titleTextView.setText(titleBook);
+        if (extras != null) {
+            Book book = (Book) extras.getSerializable("SELECTED_BOOK");
 
-        //authorTextView = (TextView)findViewById(R.id.infoTextView2);
-        //authorTextView.setText(author);
+            titleTextView.setText(book.getTitle());
+            authorTextView.setText(book.getTitle());
 
-        //folderImageView = (ImageView)findViewById(R.id.infoImageView1);
-        //folderImageView.setImageBitmap(bitmap);
+            Bitmap bitmap = BitmapFactory.decodeByteArray(book.getImage(), 0, book.getImage().length);
+            folderImageView.setImageBitmap(bitmap);
+        }
     }
 
 
