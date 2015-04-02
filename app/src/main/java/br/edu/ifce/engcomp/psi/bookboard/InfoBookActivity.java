@@ -15,20 +15,23 @@ import br.edu.ifce.engcomp.psi.model.Book;
  * Created by FAMÍLIA on 01/04/2015.
  */
 public class InfoBookActivity extends Activity {
-
-
     private String titleBook,author;
     private Bitmap bitmap;
-    TextView titleTextView,authorTextView;
+    TextView titleTextView,authorTextView, publisherTextView, volumeTextView, synopsysTextView;
     ImageView folderImageView;
 
     @Override
     protected void onCreate(Bundle saveInstanceBundle) {
         super.onCreate(saveInstanceBundle);
         setContentView(R.layout.info_book);
-        titleTextView = (TextView)findViewById(R.id.infoTextView1);
-        authorTextView = (TextView)findViewById(R.id.infoTextView2);
-        folderImageView = (ImageView)findViewById(R.id.infoImageView1);
+
+        titleTextView       = (TextView) findViewById(R.id.infoTextView1);
+        authorTextView      = (TextView) findViewById(R.id.infoTextView2);
+        publisherTextView   = (TextView) findViewById(R.id.publish);
+        volumeTextView      = (TextView) findViewById(R.id.volume);
+        synopsysTextView    = (TextView) findViewById(R.id.synopsisText);
+
+        folderImageView     = (ImageView)findViewById(R.id.infoImageView1);
 
         Intent currentIntent = getIntent();
         Bundle extras = currentIntent.getExtras();
@@ -38,6 +41,9 @@ public class InfoBookActivity extends Activity {
 
             titleTextView.setText(book.getTitle());
             authorTextView.setText(book.getTitle());
+            publisherTextView.setText(book.getPublisher());
+            volumeTextView.setText(String.format("Volume: %d", book.getVolume()));
+            synopsysTextView.setText(" ");
 
             Bitmap bitmap = BitmapFactory.decodeByteArray(book.getImage(), 0, book.getImage().length);
             folderImageView.setImageBitmap(bitmap);

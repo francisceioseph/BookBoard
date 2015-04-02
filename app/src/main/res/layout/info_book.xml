@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff3e0"
-    android:padding="5dp"
+    android:padding="10dp"
     android:id="@+id/infoBook">
 
     <ImageView
@@ -17,12 +17,15 @@
         android:id="@+id/infoTextView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_marginLeft="23dp"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/infoImageView1"
         android:text="Title Book 1"
-        android:textSize="16sp"
-        android:textColor="#000000" />
+        android:textSize="18dp"
+        android:textColor="#000000"
+        android:elegantTextHeight="false"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/infoTextView2"
@@ -31,6 +34,46 @@
         android:text="Author"
         android:layout_below="@+id/infoTextView1"
         android:layout_alignStart="@+id/infoTextView1"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Publish"
+        android:id="@+id/publish"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/infoTextView2"
+        android:layout_alignStart="@+id/infoTextView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="volume"
+        android:id="@+id/volume"
+        android:layout_below="@+id/publish"
+        android:layout_alignStart="@+id/publish"
+        android:layout_marginTop="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Synopsis"
+        android:id="@+id/textView"
+        android:layout_below="@+id/infoImageView1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lorem ipsum dolor..."
+        android:id="@+id/synopsisText"
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginTop="19dp"
+        android:textSize="16dp" />
+
 
 </RelativeLayout>
