@@ -1,11 +1,12 @@
 package br.edu.ifce.engcomp.psi.model;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
  * Created by FAMÍLIA on 25/03/2015.
  */
-public class Book {
+public class Book{
 
     private Integer idBook;
     private String title;

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,7 @@ public class LibraryFragment extends Fragment{
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Book book = (Book)booksListView.getAdapter().getItem(position);
+                //Book book = (Book)parent.getAdapter().getItem(position);
                 //Toast.makeText(getActivity().getApplicationContext(),"Teste", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getActivity(),InfoBookActivity.class);
