@@ -34,7 +34,6 @@ public class LibraryFragment extends Fragment{
                 bookDAO.getBookAll()
         ));
 
-
         booksListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -43,6 +42,9 @@ public class LibraryFragment extends Fragment{
                 //Toast.makeText(getActivity().getApplicationContext(),"Teste", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getActivity(),InfoBookActivity.class);
+
+                intent.putExtra("SELECTED_BOOK", book);
+
                 startActivity(intent);
             }
         });

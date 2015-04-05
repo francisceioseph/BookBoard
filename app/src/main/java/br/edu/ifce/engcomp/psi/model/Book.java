@@ -6,7 +6,7 @@ import java.util.Arrays;
 /**
  * Created by FAMÍLIA on 25/03/2015.
  */
-public class Book{
+public class Book implements Serializable{
 
     private Integer idBook;
     private String title;
