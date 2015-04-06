@@ -12,17 +12,17 @@ public class SynopsiRepository {
             " rainha - uma cruel mulher do clã Lannister - e sua intenção é proteger o rei. Mas ter como inimigo os"+
             " Lannister pode ser fatal: a ambição dessa família pelo poder parece não ter limites e o rei corre"+
             " grande perigo. Agora, sozinho na corte, Eddard percebe que não só o rei está em apuros, mas também"+
-            " ele e toda sua família.";
+            " ele e toda sua família. \n";
 
     public static String gt2 = "A Fúria dos Reis - Um cometa da cor do sangue e fogo atravessa o céu. E a partir"+
             " da cidade antiga de Dragonstone às margens proibidas de Winterfell, reina o caos. Seis nações lutam"+
             " pelo controle de uma terra dividida e pelo Trono de Ferro dos Sete Reinos, preparando-se para o embate"+
-            " através de tumulto, confusão e guerra."+
+            " através de tumulto, confusão e guerra. \n"+
             " É um conto em que irmãos conspiram contra irmão e os mortos se levantam no meio da noite. Neste lugar"+
             " uma princesa se disfarça como um garoto órfão, um cavaleiro espiritual prepara um veneno para uma"+
             " feiticeira traidora, e homens selvagens descem das Montanhas da Lua para devastar o campo de batalha."+
             " Com um pano de fundo incesto, alquimia e assassinato, a vitória pode chegar aos homens e mulheres possuidores"+
-            " do aço mais frio … e corações mais gelados. Quando há um confronto entre reis, toda a terra treme.";
+            " do aço mais frio … e corações mais gelados. Quando há um confronto entre reis, toda a terra treme. \n";
 
     public static String umabreve = "Uma Breve História do Tempo - Uma das mentes mais geniais do mundo moderno, Stephen Hawking"+
             " guia o leitor na busca por respostas a algumas das maiores dúvidas da humanidade: Qual a origem do universo?"+
@@ -31,7 +31,7 @@ public class SynopsiRepository {
             " Com ilustrações criativas e texto lúcido e bem-humorado, Hawking desvenda desde os mistérios da física de partículas"+
             " até a dinâmica que movimenta centenas de milhões de galáxias por todo o universo. Para o iniciado, Uma breve história"+
             " do tempo é uma bela representação de conceitos complexos; para o leigo, é um vislumbre dos segredos mais profundos da"+
-            " criação.";
+            " criação. \n";
 
     public static String contato = "Contato com extraterrestres não é sinônimo de homenzinhos verdes desembarcando de"+
             " um disco voador. É muito mais- sinais captados num radiotelescópio podem conter mensagens capazes de nos"+
@@ -40,7 +40,7 @@ public class SynopsiRepository {
             " a inteligência humana. Esse é o ponto de partida de Carl Sagan, que, aliando as tensões da melhor literatura"+
             " ao conhecimento científico mais avançado, compõe um romance que pode provocar em nós todas as reações - menos"+
             " a indiferença. Em Contato , o que está em jogo é o mundo tal como o conhecemos. Como quem faz uma aposta, Sagan"+
-            " nos convida a uma viagem assustadoramente fascinante pelo buraco negro que é a inteligência humana.";
+            " nos convida a uma viagem assustadoramente fascinante pelo buraco negro que é a inteligência humana. \n";
 
     public static String ailha = "A Ilha do Conhecimento - Quanto podemos conhecer do mundo? Será que podemos conhecer"+
             " tudo? Ou será que existem limites fundamentais para o que a ciência pode explicar? Se estes limites existem,"+
@@ -48,7 +48,7 @@ public class SynopsiRepository {
             " são o foco deste livro, um ensaio sobre como compreendemos o Universo e a nós mesmos."+
             " Do mesmo autor de A Dança do Universo e O Fim da Terra e do Céu, vencedores do Prêmio Jabuti.É autor, entre"+
             " outros livros, do best seller Criação imperfeita, A dança do universo e de O fim da Terra e do Céu, os dois"+
-            " últimos vencedores do Prêmio Jabuti.";
+            " últimos vencedores do Prêmio Jabuti. \n";
 
     public static String farenheit = "Fahrenheit 451 - Escrito após o término da Segunda Guerra Mundial, em 1953,"+
             " Fahrenheit 451, de Ray Bradubury, revolucionou a literatura com um texto que condena não só a opressão"+
@@ -66,7 +66,7 @@ public class SynopsiRepository {
             " instalados em suas casas ou em praças ao ar livre. A leitura deixou de ser meio para aquisição de conhecimento crítico"+
             " e tornou-se tão instrumental quanto a vida dos cidadãos, suficiente apenas para que saibam ler manuais e operar aparelhos."+
             " Fahrenheit 451 tornou-se um clássico não só na literatura, mas também no cinema. Em 1966, o diretor François Truffaut"+
-            " adaptou o livro e lançou o filme de mesmo nome estrelado por Oskar Werner e Julie Christie.";
+            " adaptou o livro e lançou o filme de mesmo nome estrelado por Oskar Werner e Julie Christie.\n";
 
     public static String onomedovento = "O Nome do Vento - Ninguém sabe ao certo quem é o herói ou o vilão desse fascinante"+
             " universo criado por Patrick Rothfuss. Na realidade, essas duas figuras se concentram em Kote, um homem enigmático"+
@@ -79,7 +79,7 @@ public class SynopsiRepository {
             " aproximar-se dele para descobrir a verdade. Pouco a pouco, a história de Kote vai sendo revelada, assim como sua"+
             " multifacetada personalidade - notório mago, esmerado ladrão, amante viril, herói salvador, músico magistral,"+
             " assassino infame. Nesta provocante narrativa, o leitor é transportado para um mundo fantástico, repleto de mitos"+
-            " e seres fabulosos, heróis e vilões, ladrões e trovadores, amor e ódio, paixão e vingança.";
+            " e seres fabulosos, heróis e vilões, ladrões e trovadores, amor e ódio, paixão e vingança. \n";
 
     public static String otemordosabio = "O Temor do Sábio - O temor do sábio dá continuidade à impressionante"+
             " história de Kvothe, o Arcano, o Sem-Sangue, o Matador do Rei. Quando é aconselhado a abandonar"+
@@ -93,7 +93,7 @@ public class SynopsiRepository {
             " também conhece um guerreiro ademriano que o leva a sua terra, um lugar de costumes muito diferentes,"+
             " onde vai aprender a lutar como poucos. Enquanto persiste em sua busca de respostas sobre o Chandriano,"+
             " o grupo de criaturas demoníacas responsável pela morte de seus pais, Kvothe percebe como a vida pode"+
-            " ser difícil quando um homem se torna uma lenda de seu próprio tempo.";
+            " ser difícil quando um homem se torna uma lenda de seu próprio tempo. \n";
 
     public static String teoremadefermat = "O Último Teorema de Fermat, como ficou conhecido, tornou-se"+
             " o santo graal da matemática. Vidas inteiras foram devotadas- e até mesmo sacrificadas- à"+
@@ -107,7 +107,7 @@ public class SynopsiRepository {
             " terminado. Um erro o fez voltar às pesquisas por mais quatorze meses, até que em 1995 ele"+
             " ganhou as páginas de jornais do mundo inteiro e 50 mil libras da Fundação Wolfskehl. O Último"+
             " Teorema de Fermat é a história da busca épica para resolver o maior problema de matemática de"+
-            " todos os tempos. Um drama humano de grandes sonhos, brilho intelectual e extraordinária determinação.";
+            " todos os tempos. Um drama humano de grandes sonhos, brilho intelectual e extraordinária determinação. \n";
 
     public static String poderhabito = "O Poder do Hábito - Durante os últimos dois anos, uma jovem"+
             " transformou quase todos os aspectos de sua vida. Parou de fumar, correu uma maratona e"+
@@ -122,5 +122,5 @@ public class SynopsiRepository {
             " Duhigg elabora, em O poder do hábito, um argumento animador: a chave para se exercitar regularmente,"+
             " perder peso, educar bem os filhos, se tornar uma pessoa mais produtiva, criar empresas revolucionárias"+
             " e ter sucesso é entender como os hábitos funcionam. Transformá-los pode gerar bilhões e significar a"+
-            " diferença entre fracasso e sucesso, vida e morte.";
+            " diferença entre fracasso e sucesso, vida e morte. \n";
 }
