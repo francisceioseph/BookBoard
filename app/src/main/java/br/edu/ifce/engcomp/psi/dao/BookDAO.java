@@ -29,6 +29,8 @@ public class BookDAO {
         values.put("author", book.getAuthor());
         values.put("image",book.getImage());
         values.put("publisher",book.getPublisher());
+        values.put("numberPage",book.getNumberPage());
+        values.put("synopsis",book.getSynopsis());
 
         db.insert("book",null, values);
     }
@@ -47,6 +49,8 @@ public class BookDAO {
                 book.setAuthor(cursor.getString(2));
                 book.setPublisher(cursor.getString(3));
                 book.setImage(cursor.getBlob(4));
+                book.setNumberPage(cursor.getInt(5));
+                book.setSynopsis(cursor.getString(6));
                 bookList.add(book);
             }while (cursor.moveToNext());
         }

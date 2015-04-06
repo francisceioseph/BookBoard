@@ -25,7 +25,7 @@ public class SplashScreenActivity extends Activity implements Runnable{
         //insertUserDB();
         //BookForDB.getBookForDB(getResources(), this);
         Handler splashScreenHandle = new Handler();
-        splashScreenHandle.postDelayed(SplashScreenActivity.this,4000);
+        splashScreenHandle.postDelayed(SplashScreenActivity.this,3000);
     }
 
     public void run(){
