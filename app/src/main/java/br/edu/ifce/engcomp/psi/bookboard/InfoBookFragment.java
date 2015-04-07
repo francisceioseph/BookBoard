@@ -1,55 +1,47 @@
 package br.edu.ifce.engcomp.psi.bookboard;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import br.edu.ifce.engcomp.psi.model.Book;
 
 /**
- * Created by FAMÍLIA on 01/04/2015.
- * Esta classe foi substituida pela InfoBookFragmentActivity
+ * Created by FAMÍLIA on 06/04/2015.
  */
-public class InfoBookActivity extends ActionBarActivity {
+public class InfoBookFragment extends Fragment {
+
     private String titleBook,author;
     private Bitmap bitmap;
     TextView titleTextView,authorTextView, publisherTextView, pageTextView, synopsysTextView;
     ImageView folderImageView;
 
     @Override
-    protected void onCreate(Bundle saveInstanceBundle) {
-        super.onCreate(saveInstanceBundle);
-        setContentView(R.layout.info_book);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayShowHomeEnabled(false);
-        actionBar.setDisplayShowTitleEnabled(false);
-        /*
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-        ActionBar.Tab tab1 = actionBar.newTab();
-        tab1.setText("Info");
-        tab1.setTabListener();
-        */
-        titleTextView       = (TextView) findViewById(R.id.infoTextView1);
-        authorTextView      = (TextView) findViewById(R.id.infoTextView2);
-        publisherTextView   = (TextView) findViewById(R.id.publish);
-        pageTextView        = (TextView) findViewById(R.id.pagina);
-        synopsysTextView    = (TextView) findViewById(R.id.synopsisText);
+        View view = inflater.inflate(R.layout.info_book,container,false);
 
-        folderImageView     = (ImageView)findViewById(R.id.infoImageView1);
+        titleTextView       = (TextView) view.findViewById(R.id.infoTextView1);
+        authorTextView      = (TextView) view.findViewById(R.id.infoTextView2);
+        publisherTextView   = (TextView) view.findViewById(R.id.publish);
+        pageTextView        = (TextView) view.findViewById(R.id.pagina);
+        synopsysTextView    = (TextView) view.findViewById(R.id.synopsisText);
 
-        Intent currentIntent = getIntent();
-        Bundle extras = currentIntent.getExtras();
+        folderImageView     = (ImageView)view.findViewById(R.id.infoImageView1);
 
-        if (extras != null) {
-            Book book = (Book) extras.getSerializable("SELECTED_BOOK");
+        Bundle extras = getActivity().getIntent().getExtras();
+
+        if (extras != null){
+            //Book book = (Book)getArguments().getSerializable("SELECTED_BOOK");
+            Book book = (Book)extras.get("SELECTED_BOOK");
 
             titleTextView.setText(book.getTitle());
             authorTextView.setText(book.getAuthor());
@@ -62,9 +54,9 @@ public class InfoBookActivity extends ActionBarActivity {
             Bitmap bitmap = BitmapFactory.decodeByteArray(book.getImage(), 0, book.getImage().length);
             folderImageView.setImageBitmap(bitmap);
         }
+
+        return(view);
     }
-
-
     public String getTitleBook() {
         return titleBook;
     }
@@ -88,4 +80,5 @@ public class InfoBookActivity extends ActionBarActivity {
     public void setBitmap(Bitmap bitmap) {
         this.bitmap = bitmap;
     }
+
 }

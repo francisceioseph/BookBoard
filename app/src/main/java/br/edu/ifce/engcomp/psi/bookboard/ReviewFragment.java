@@ -14,10 +14,11 @@ public class ReviewFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        TextView tv = new TextView(getActivity());
+        View view = inflater.inflate(R.layout.fragment_review,container,false);
+        TextView tv = (TextView) view.findViewById(R.id.review);
         tv.setText("Review Fragment em ação");
 
-        return(tv);
+        return(view);
     }
 
 }

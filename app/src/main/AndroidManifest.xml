@@ -33,6 +33,11 @@
             android:label="@string/app_name"
             android:theme="@style/Theme.AppCompat.Light">
         </activity>
+        <activity
+            android:name=".InfoBookFragmentActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light">
+        </activity>
     </application>
 
 </manifest>

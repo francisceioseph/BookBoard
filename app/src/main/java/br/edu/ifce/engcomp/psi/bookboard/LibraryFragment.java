@@ -41,7 +41,7 @@ public class LibraryFragment extends Fragment{
                 //Book book = (Book)parent.getAdapter().getItem(position);
                 //Toast.makeText(getActivity().getApplicationContext(),"Teste", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(getActivity(),InfoBookActivity.class);
+                Intent intent = new Intent(getActivity(),InfoBookFragmentActivity.class);
 
                 intent.putExtra("SELECTED_BOOK", book);
 
