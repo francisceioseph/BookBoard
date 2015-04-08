@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import java.util.List;
@@ -53,6 +54,8 @@ public class LibraryAdapter extends BaseAdapter {
 
         TextView title = (TextView)convertView.findViewById(R.id.textView1);
         TextView author = (TextView)convertView.findViewById(R.id.textView2);
+        TextView yearTextView = (TextView) convertView.findViewById(R.id.yearTextView);
+        RatingBar ratingBar = (RatingBar)convertView.findViewById(R.id.ratingBar);
 
         Book book = bookList.get(position);
 
@@ -63,6 +66,8 @@ public class LibraryAdapter extends BaseAdapter {
 
         title.setText(book.getTitle());
         author.setText(book.getAuthor());
+        yearTextView.setText(String.valueOf(book.getYear()));
+        ratingBar.setRating(book.getRating());
 
         return convertView;
     }

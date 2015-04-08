@@ -18,7 +18,8 @@ public class Book implements Serializable{
     private String isbn;
     private byte [] image;
     private String synopsis;
-
+    private int year;
+    private float rating;
 
 
     public Integer getIdBook() {
@@ -99,6 +100,22 @@ public class Book implements Serializable{
 
     public void setSynopsis(String synopsis) {
         this.synopsis = synopsis;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public float getRating() {
+        return rating;
+    }
+
+    public void setRating(float rating) {
+        this.rating = rating;
     }
 
     @Override

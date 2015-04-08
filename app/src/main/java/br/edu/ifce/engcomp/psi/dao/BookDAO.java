@@ -31,6 +31,8 @@ public class BookDAO {
         values.put("publisher",book.getPublisher());
         values.put("numberPage",book.getNumberPage());
         values.put("synopsis",book.getSynopsis());
+        values.put("year",book.getYear());
+        values.put("rating",book.getRating());
 
         db.insert("book",null, values);
     }
@@ -51,6 +53,8 @@ public class BookDAO {
                 book.setImage(cursor.getBlob(4));
                 book.setNumberPage(cursor.getInt(5));
                 book.setSynopsis(cursor.getString(6));
+                book.setYear(cursor.getInt(7));
+                book.setRating(cursor.getFloat(8));
                 bookList.add(book);
             }while (cursor.moveToNext());
         }

@@ -11,7 +11,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 public class ViewPagerAdapter extends FragmentPagerAdapter {
     final int PAGE_COUNT = 2;
     // Tab Titles
-    private String tabtitles[] = new String[] { "Info", "Resenhas"};
+    private String tabtitles[] = new String[] { "Detalhes", "Resenhas"};
     Context context;
 
     public ViewPagerAdapter(FragmentManager fm) {

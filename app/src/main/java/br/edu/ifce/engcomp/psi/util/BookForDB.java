@@ -22,6 +22,9 @@ public class BookForDB {
         book.setImage(ImageUtil.getImage(resource,R.drawable.guerradostronos1));
         book.setNumberPage(592);
         book.setSynopsis(SynopsiRepository.gt1);
+        book.setYear(2010);
+        book.setRating(4);
+
         bookDAO.insert(book);
 
         Book book2 = new Book();
@@ -31,6 +34,8 @@ public class BookForDB {
         book2.setImage(ImageUtil.getImage(resource,R.drawable.guerradostronos2));
         book2.setNumberPage(656);
         book2.setSynopsis(SynopsiRepository.gt2);
+        book2.setYear(2011);
+        book2.setRating(4);
 
         bookDAO.insert(book2);
 
@@ -41,6 +46,8 @@ public class BookForDB {
         book3.setNumberPage(256);
         book3.setSynopsis(SynopsiRepository.umabreve);
         book3.setImage(ImageUtil.getImage(resource,R.drawable.brevehistoriadotempo));
+        book3.setYear(2015);
+        book3.setRating(3);
 
         bookDAO.insert(book3);
 
@@ -51,6 +58,9 @@ public class BookForDB {
         book4.setImage(ImageUtil.getImage(resource,R.drawable.contato));
         book4.setNumberPage(437);
         book4.setSynopsis(SynopsiRepository.contato);
+        book4.setYear(2008);
+        book4.setRating(5);
+
         bookDAO.insert(book4);
 
         Book book5 = new Book();
@@ -60,6 +70,8 @@ public class BookForDB {
         book5.setNumberPage(364);
         book5.setSynopsis(SynopsiRepository.ailha);
         book5.setImage(ImageUtil.getImage(resource,R.drawable.ailhadoconhecimento));
+        book5.setYear(2014);
+        book5.setRating(4);
 
         bookDAO.insert(book5);
 
@@ -70,6 +82,8 @@ public class BookForDB {
         book6.setImage(ImageUtil.getImage(resource,R.drawable.fahrenheit451));
         book6.setNumberPage(215);
         book6.setSynopsis(SynopsiRepository.farenheit);
+        book6.setYear(2012);
+        book6.setRating(3);
 
         bookDAO.insert(book6);
 
@@ -80,6 +94,8 @@ public class BookForDB {
         book7.setImage(ImageUtil.getImage(resource,R.drawable.onomedovento));
         book7.setNumberPage(656);
         book7.setSynopsis(SynopsiRepository.onomedovento);
+        book7.setYear(2009);
+        book7.setRating(4);
 
         bookDAO.insert(book7);
 
@@ -90,6 +106,8 @@ public class BookForDB {
         book8.setImage(ImageUtil.getImage(resource,R.drawable.otemordosabio));
         book8.setNumberPage(960);
         book8.setSynopsis(SynopsiRepository.otemordosabio);
+        book8.setYear(2012);
+        book8.setRating(4);
 
         bookDAO.insert(book8);
 
@@ -100,6 +118,8 @@ public class BookForDB {
         book9.setImage(ImageUtil.getImage(resource,R.drawable.teoremadefermat));
         book9.setNumberPage(328);
         book9.setSynopsis(SynopsiRepository.teoremadefermat);
+        book9.setYear(2008);
+        book9.setRating(5);
 
         bookDAO.insert(book9);
 
@@ -110,6 +130,8 @@ public class BookForDB {
         book10.setImage(ImageUtil.getImage(resource,R.drawable.opoderdohabito));
         book10.setNumberPage(408);
         book10.setSynopsis(SynopsiRepository.poderhabito);
+        book10.setYear(2012);
+        book10.setRating(4);
 
         bookDAO.insert(book10);
     }
