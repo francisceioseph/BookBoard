@@ -22,6 +22,13 @@ public class Book implements Serializable{
     private float rating;
 
 
+    public Book(){
+
+    }
+    public Book(Integer idBook){
+        this.idBook = idBook;
+    }
+
     public Integer getIdBook() {
         return idBook;
     }

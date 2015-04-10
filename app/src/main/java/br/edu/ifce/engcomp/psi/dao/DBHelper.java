@@ -20,12 +20,14 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table book(_id integer primary key autoincrement, title text not null, author text, publisher text, image blob, numberPage integer, synopsis text, year integer, rating double)");
         db.execSQL("create table person(_id integer primary key autoincrement, name text not null, password text not null, email text not null, image blob)");
+        db.execSQL("create table review(_id integer primary key autoincrement, desc text, _idPerson integer, _idBook integer, foreign key(_idPerson) references person(_id),foreign key(_idBook) references book(_id))");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table book");
         db.execSQL("drop table person");
+        db.execSQL("drop table review");
         onCreate(db);
     }
 }

@@ -15,6 +15,10 @@ public class Person {
 
     }
 
+    public Person(Integer idUser) {
+        this.idUser = idUser;
+    }
+
     public Person(String name,String email, String password) {
         this.username = name;
         this.email = email;
