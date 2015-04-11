@@ -20,6 +20,7 @@ public class InfoBookFragmentActivity extends FragmentActivity {
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
 
+
         // Set the ViewPagerAdapter into ViewPager
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
     }
