@@ -6,7 +6,8 @@ package br.edu.ifce.engcomp.psi.util;
 public class ReviewRepository {
 
     public static String gt1_review1 ="Para quem gosta de uma leitura que te prenda, o" +
-            " GoT consegue fazer isso tranquilamente. O único problema são os personagens que o G.R.R.M. mata (risos).";
+            " GoT consegue fazer isso tranquilamente. O único problema são os personagens" +
+            " que o G.R.R.M. mata (risos).";
 
     public static String gt1_review2 = "A história fantástica mais bem elaborada, da até" +
             " impressão que seja real, é incrível a criatividade do autor.";
@@ -14,6 +15,43 @@ public class ReviewRepository {
     public static String gt1_review3 = "História escrita em boa narrativa e de maneira" +
             " muito elegante. Direta porém charmosa e as vezes fria como o inverno.";
 
+    public static String gt1_review4 ="A Guerra dos Tronos é considerada uma literatura" +
+            " fantástica e passa-se na terra fictícia de Westeros, narrada através dos" +
+            " acontecimentos ao redor de Eddard, Catelyn, Ayra, Sansa e Bran Stark," +
+            " Jon Snow, Tyrion Lannister e Daenerys Targaryen.Esse livro é de uma leitura" +
+            " incrível, George R.R. Martin sabe brincar com a nossa imaginação e se manter" +
+            " no controle.";
+
+    public static String gt1_review5 ="Ler este livro foi um deleite tão grande que me deixou" +
+            " praticamente sem palavras. Uma leitura mais que indicada para os fãs de histórias" +
+            " medievais e, porque não, para os que nunca leram nada do gênero e querem se aventurar";
+
+    public static String gt1_review6 ="George Raymond Richard Martin trabalha muito com seus personagens." +
+            " Há quem discorde de mim, algumas pessoas não tem paciência para ler. Quem tem vai adorar." +
+            " Cada detalhe, cada coisinha que Martin nos apresenta, é tudo minuciosamente esplêndido." +
+            " Você se sente imerso quando da foco total ao livro. Simplesmente o melhor livro de" +
+            " fantasia da década ou até do século.";
+
+    public static String gt1_review7 ="As crônicas de gelo e fogo I nos apresentam a sete reinos governados" +
+            " por sete casas principais, Baratheon, Stark, Lannister, Arryn, Tully, Tyrell, Targaryen." +
+            " O livro tem como família principal os Starks, dono de Winterfel, reino do norte, ou do" +
+            " inverno se assim preferir. A história é dividida em visões de mundo distintas, ao todo" +
+            " são oito pontos de vistas. Desses oito, seis pertence aos Starks. Eddard Stark, sua" +
+            " esposa Cathelyn (outrora Tully), suas filhas, Arya e Sansa, seu filho Brandon e seu" +
+            " Bastardo John. As outras visões ficam com Tyrion Lannister, o anão, e Daenerys Targaryen," +
+            " que pertence à família do dragão. ";
+
+    public static String gt1_review8 ="O livro começa contando a história da família Stark, numa narrativa" +
+            " de grande qualidade e com uma história cercada de ação e emoções. George R. R. Martin consegue" +
+            " de maneira surpreendente te prender a cada página, você não consegue e não quer parar de ler" +
+            " devido a grande sequência de acontecimentos que cercam a história.";
+
+    public static String gt1_review9 ="As crônicas do gelo e fogo é uma obra composta por cinco volumes," +
+            " e guerra dos tronos é o começo dessa saga tão incrível.";
+
+    public static String gt1_review10 ="O mundo cheio de incertezas, batalhas, diálogos épicos e personagem" +
+            " tão obscuro como o próprio passado deles, assim vi got. O primeiro volume apresenta a terra de" +
+            " Westeros onde todos querem o trono de ferro, e cada um fará seu jogo até o objetivo.";
 
     public static String gt2_review1 = "O livro se da no foco central de uma guerra de " +
             "reis, no qual cada um tenta assumir o controle absoluto de Westeros. Nesse " +

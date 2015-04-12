@@ -63,6 +63,14 @@ public class SplashScreenActivity extends Activity implements Runnable{
         Person person8 = new Person("Fred Eu","fredeu@gmail.com","1234");
         Person person9 = new Person("Eduardo Leite","edu@gmail.com","1234");
 
+        Person person10 = new Person("Kamila Freire","ka@gmail.com","1234");
+        Person person11 = new Person("Tammy","tammy@gmail.com","1234");
+        Person person12 = new Person("Lucks","lucks@gmail.com","1234");
+        Person person13 = new Person("Luana","luana@gmail.com","1234");
+        Person person14 = new Person("Sergio Ricardo","sergio@gmail.com","1234");
+        Person person15 = new Person("Guillherme","guilherme@gmail.com","1234");
+        Person person16 = new Person("Lorena","lorena@gmail.com","1234");
+
 
         personDAO.insert(person);
         personDAO.insert(person1);
@@ -74,6 +82,13 @@ public class SplashScreenActivity extends Activity implements Runnable{
         personDAO.insert(person7);
         personDAO.insert(person8);
         personDAO.insert(person9);
+        personDAO.insert(person10);
+        personDAO.insert(person11);
+        personDAO.insert(person12);
+        personDAO.insert(person13);
+        personDAO.insert(person14);
+        personDAO.insert(person15);
+        personDAO.insert(person16);
     }
 
 }

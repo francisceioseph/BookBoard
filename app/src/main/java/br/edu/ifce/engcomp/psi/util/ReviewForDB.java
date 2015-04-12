@@ -37,6 +37,55 @@ public class ReviewForDB {
 
         reviewBookDAO.insert(reviewBook3);
 
+        ReviewBook reviewBook31 = new ReviewBook();
+        reviewBook31.setDescription(ReviewRepository.gt1_review4);
+        reviewBook31.setBook(new Book(1));
+        reviewBook31.setPerson(new Person(11));
+
+        reviewBookDAO.insert(reviewBook31);
+
+        ReviewBook reviewBook32 = new ReviewBook();
+        reviewBook32.setDescription(ReviewRepository.gt1_review5);
+        reviewBook32.setBook(new Book(1));
+        reviewBook32.setPerson(new Person(12));
+
+        reviewBookDAO.insert(reviewBook32);
+
+        ReviewBook reviewBook33 = new ReviewBook();
+        reviewBook33.setDescription(ReviewRepository.gt1_review6);
+        reviewBook33.setBook(new Book(1));
+        reviewBook33.setPerson(new Person(13));
+
+        reviewBookDAO.insert(reviewBook33);
+
+        ReviewBook reviewBook34 = new ReviewBook();
+        reviewBook34.setDescription(ReviewRepository.gt1_review7);
+        reviewBook34.setBook(new Book(1));
+        reviewBook34.setPerson(new Person(14));
+
+        reviewBookDAO.insert(reviewBook34);
+
+        ReviewBook reviewBook35 = new ReviewBook();
+        reviewBook35.setDescription(ReviewRepository.gt1_review8);
+        reviewBook35.setBook(new Book(1));
+        reviewBook35.setPerson(new Person(15));
+
+        reviewBookDAO.insert(reviewBook35);
+
+        ReviewBook reviewBook36 = new ReviewBook();
+        reviewBook36.setDescription(ReviewRepository.gt1_review9);
+        reviewBook36.setBook(new Book(1));
+        reviewBook36.setPerson(new Person(16));
+
+        reviewBookDAO.insert(reviewBook36);
+
+        ReviewBook reviewBook37 = new ReviewBook();
+        reviewBook37.setDescription(ReviewRepository.gt1_review10);
+        reviewBook37.setBook(new Book(1));
+        reviewBook37.setPerson(new Person(17));
+
+        reviewBookDAO.insert(reviewBook37);
+
         //-------------------------
         ReviewBook reviewBook4 = new ReviewBook();
         reviewBook4.setDescription(ReviewRepository.gt2_review1);

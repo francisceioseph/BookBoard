@@ -7,11 +7,14 @@ public class UserSingleton {
 
     private static UserSingleton instance ;
 
+
     //this userName reference the email
     private String userName;
+    private String name;
 
     private UserSingleton(){
         userName="";
+        name="";
     }
 
     public static UserSingleton getInstance(){
@@ -27,5 +30,13 @@ public class UserSingleton {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

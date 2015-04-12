@@ -25,6 +25,7 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
         public ViewHolder(View v) {
             super(v);
             view = v;
+
         }
     }
 

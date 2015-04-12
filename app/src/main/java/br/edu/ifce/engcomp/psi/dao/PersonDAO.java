@@ -40,10 +40,11 @@ public class PersonDAO {
             return null;
         }
 
+        String name = cursor.getString(cursor.getColumnIndex("name"));
         String emailUser = cursor.getString(cursor.getColumnIndex("email"));
         String passwordUser = cursor.getString(cursor.getColumnIndex("password"));
 
-        return new Person(emailUser,passwordUser);
+        return new Person(name,emailUser,passwordUser);
     }
 
     public byte[] getImage(String email){

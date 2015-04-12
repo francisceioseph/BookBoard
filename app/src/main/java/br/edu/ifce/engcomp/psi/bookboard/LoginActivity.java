@@ -43,6 +43,7 @@ public class LoginActivity extends Activity{
 
                 Person person = personDAO.getPerson(login.getText().toString(),password.getText().toString());
 
+                UserSingleton.getInstance().setName(person.getUsername());
                 UserSingleton.getInstance().setUserName(person.getEmail());
 
                 String strlogin = login.getText().toString();
