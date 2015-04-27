@@ -11,8 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
+
 
 import com.melnykov.fab.FloatingActionButton;
 
@@ -34,6 +33,7 @@ public class ReviewFragment extends Fragment {
     private RecyclerView.LayoutManager mLayoutManager;
     private List<ReviewBook> reviewBookList;
     private Book book;
+    private ReviewBookDAO reviewBookDAO;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -56,12 +56,13 @@ public class ReviewFragment extends Fragment {
             book = (Book)extras.get("SELECTED_BOOK");
 
             // specify an adapter
-            ReviewBookDAO reviewBookDAO = new ReviewBookDAO(getActivity().getApplicationContext());
+            reviewBookDAO = new ReviewBookDAO(getActivity().getApplicationContext());
             reviewBookList = reviewBookDAO.getReviewByIdBook(book.getIdBook());
             mAdapter = new ReviewAdapter(reviewBookList);
             mRecyclerView.setAdapter(mAdapter);
         }
-        //Reposavel pelo button flutuante.
+
+        //Responsavel pelo button flutuante.
         FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
         fab.attachToRecyclerView(mRecyclerView);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -74,12 +75,10 @@ public class ReviewFragment extends Fragment {
         return(view);
     }
 
-
-    public void dialogReview(Book book){
+    public void dialogReview(final Book book){
         AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
         alert.setTitle("Livro : " + book.getTitle());
         alert.setMessage("Escreva sua resenha!");
-
 
         final EditText input = new EditText(getActivity());
         alert.setView(input);
@@ -88,10 +87,15 @@ public class ReviewFragment extends Fragment {
             public void onClick(DialogInterface dialog, int id) {
                 ReviewBook reviewBook = new ReviewBook();
                 Person person = new Person();
+                person.setIdUser(UserSingleton.getInstance().getId());
                 person.setUsername(UserSingleton.getInstance().getName());
                 reviewBook.setPerson(person);
+                reviewBook.setBook(new Book(book.getIdBook()));
                 reviewBook.setDescription(input.getText().toString());
-                Log.i("nOTA",input.getText().toString());
+
+                reviewBookDAO.insert(reviewBook);
+
+                Log.i("NOTA",input.getText().toString());
                 //Update view
                 if (!input.getText().toString().equals("")) {
                     reviewBookList.add(reviewBook);

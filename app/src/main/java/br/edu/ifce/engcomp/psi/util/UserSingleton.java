@@ -11,10 +11,12 @@ public class UserSingleton {
     //this userName reference the email
     private String userName;
     private String name;
+    private Integer id;
 
     private UserSingleton(){
         userName="";
         name="";
+        id=null;
     }
 
     public static UserSingleton getInstance(){
@@ -22,6 +24,14 @@ public class UserSingleton {
             instance = new UserSingleton();
         }
         return instance;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getUserName() {
